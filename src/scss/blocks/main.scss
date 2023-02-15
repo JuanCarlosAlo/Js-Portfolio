@@ -1,1 +1,15 @@
 /* ESTILOS DEL MAIN */
+svg{
+    stroke-dasharray: 2000;
+    stroke-dashoffset:2000;
+    stroke-width: 10px;
+    pointer-events: none;
+    animation: firstAnimation 2s linear forwards infinite;
+
+@keyframes firstAnimation {
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+}
