@@ -1,5 +1,11 @@
 :root {
-  /* Variables CSS */
+  /* light mode*/
+  --light-background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 80%, rgba(138,138,138,1) 100%);
+  --white: #fff;
+
+  /* dark mode */
+  --dark-background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,31,31,1) 80%, rgba(31,31,31,1) 100%);
+  --black: rgb(0, 0, 0);
 }
 
 /* Variables SASS */

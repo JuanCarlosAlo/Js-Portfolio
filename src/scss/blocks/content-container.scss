@@ -1,0 +1,68 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 234px);
+    width: 100%;
+
+    gap: 80px;
+}
+
+.bar{
+    width: 4px;
+    height: 437px;
+    transform: scaleY(0);
+    background-color: var(--black);
+}
+
+.bar--right,
+.bar--left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar--left--upper,
+.bar--right--upper{
+    &::after{
+        @include pseudo(4px,4px){
+            position: absolute;
+            top: -20px;
+            background-color: var(--black);
+        }
+    }
+}
+.bar--left--lower,
+.bar--right--lower{
+    &::before{
+        @include pseudo(4px,4px){
+            position: absolute;
+            bottom: -20px;
+            background-color: var(--black);
+        }
+    }
+}
+
+.bar{
+    
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    transform: scaleX(1);
+}
+
+.bar--left{
+   
+    transform: transalateX(0);
+}
+
+.bar--left{
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    transform: transalateX(500px);
+}

@@ -1,5 +1,23 @@
 html {
+
+}
+@font-face {
+    font-family: FotRodin-M;
+    src: url('/assets/fonts/fot-rodin-pro/FOTpro-m.otf');
+}
+
+@font-face {
+    font-family: FotRodin-L;
+    src: url('/assets/fonts/fot-rodin-pro/FOTpro-l.otf');
+}
+
+@font-face {
+    font-family: FotRodin-DB;
+    src: url('/assets/fonts/fot-rodin-pro/FOTpro-db.otf');
 }
 body {
- background-color: black;
+ background: var(--light-background);
+ font-family: FotRodin-M;
+
 }
+
