@@ -12,29 +12,68 @@
     <header class="header">
       <img class="logo" src="assets/images/logo.png" alt="">
       <nav>
-        <ul class="menu">
-          <li class="menu__item">INTRO</li>
-          <li class="menu__item">WEB</li>
-          <li class="menu__item">DESIGN</li>
-          <li class="menu__item">CONTACT</li>
-          <li class="menu__item">DARK</li>
+        <ul id="menu" class="menu">
+         
+            <li data-menu="intro" class="menu__item">INTRO</li>
+        
+        
+            <li data-menu="web" class="menu__item">WEB</li>
+      
+
+            <li data-menu="design" class="menu__item">DESIGN</li>
+     
+   
+            <li data-menu="contact" class="menu__item">CONTACT</li>
+     
+          <li data-menu="dark" class="menu__item dark-mode">D</li>
+
         </ul>
       </nav>
-      <img src="assets/images/logo.png" alt="">
+      <img class="tbc" src="assets/images/logo.png" alt="">
     </header>
     <main class="main">
       <div class="main-container">
-        <div class="bar--left">
+        <div id="bar-left" class="bar--left">
           <div class="bar bar--left--upper"></div>
           <div class="bar bar--left--lower"></div>
         </div>
-        <div class="bar--right">
+        <div id="bar-right" class="bar--right">
           <div class="bar bar--right--upper"></div>
           <div class="bar bar--right--lower"></div>
         </div>
+        <article id="intro" class="article about-me">
+          <h2 class="article__title">About me</h2>
+          <article class="article__content">
+            <div class="about-me__img"></div>
+            <div class="article__info">
+              <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam cupiditate totam porro tempore iste deserunt reiciendis nemo laborum laudantium corrupti, distinctio odit praesentium. Vitae temporibus soluta eius possimus ab!</p>
+              <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam cupiditate totam porro tempore iste deserunt reiciendis nemo laborum laudantium corrupti, distinctio odit praesentium. Vitae temporibus soluta eius possimus ab!</p>
+            </div>
+            
+              
+           
+          </article>
+        
+        </article>
+        <article id="web" class="article web">
+          <h2 class="article__title">Web design</h2>
+          <article class="article__content">
+            <div class="about-me__img"></div>
+            <div class="article__info">
+              <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam cupiditate totam porro tempore iste deserunt reiciendis nemo laborum laudantium corrupti, distinctio odit praesentium. Vitae temporibus soluta eius possimus ab!</p>
+              <div class="button">HTML & CSS</div>
+              <div class="button">JAVASCRIPT</div>
+            </div>
+            
+              
+            </div>
+          </article>
+        
+        </article>
+
        
         
-
+      </div>
       </div>
     </main>                
       

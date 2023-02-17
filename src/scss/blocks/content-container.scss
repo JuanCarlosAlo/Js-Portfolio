@@ -5,33 +5,37 @@
 
 .main-container{
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: calc(100vh - 234px);
+    height: calc(100vh - 220px);
     width: 100%;
 
-    gap: 80px;
+    gap: 20px;
 }
 
 .bar{
-    width: 4px;
-    height: 437px;
+    width: 3px;
+    height: 40%;
     transform: scaleY(0);
     background-color: var(--black);
 }
 
 .bar--right,
 .bar--left{
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+   
     gap: 20px;
+    transform: translateX(0);
 }
 
 .bar--left--upper,
 .bar--right--upper{
     &::after{
-        @include pseudo(4px,4px){
+        @include pseudo(3px,3px){
             position: absolute;
             top: -20px;
             background-color: var(--black);
@@ -41,7 +45,7 @@
 .bar--left--lower,
 .bar--right--lower{
     &::before{
-        @include pseudo(4px,4px){
+        @include pseudo(3px,3px){
             position: absolute;
             bottom: -20px;
             background-color: var(--black);
@@ -56,13 +60,23 @@
     transform: scaleX(1);
 }
 
-.bar--left{
-   
-    transform: transalateX(0);
-}
-
-.bar--left{
+    
+.bar--left--show{
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-    transform: transalateX(500px);
+    transform: translateX(-47vw);
+}
+
+.bar--right--show{
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    transform: translateX(47vw);
+}
+
+@include responsive(laptop){
+
+
+ 
+    
+
 }

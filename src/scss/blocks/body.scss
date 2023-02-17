@@ -1,5 +1,5 @@
 html {
-
+    font-size: 14px;
 }
 @font-face {
     font-family: FotRodin-M;
@@ -17,6 +17,8 @@ html {
 }
 body {
  background: var(--light-background);
+ background-size: cover;
+ background-repeat: no-repeat;
  font-family: FotRodin-M;
 
 }

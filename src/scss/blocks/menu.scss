@@ -1,13 +1,62 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+
+
 .menu{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 1000px;
-
+    width:100vw;
+ 
     &__item{
-        width: 170px;
-        padding: 0.5rem;
+        width: 65px;
+        padding: 0.3rem;
         border: 2px solid var(--black);
     }
+    
 
 }
+
+.dark-mode{
+    width: 40px;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+@include responsive(laptop){
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    
+        &__item{
+            width: 100px;
+            padding: 0.5rem;
+            border: 2px solid var(--black);
+        }
+    
+    }
+}
+
+@include responsive(desktop){
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    
+        &__item{
+            width: 150px;
+            padding: 0.5rem;
+            border: 2px solid var(--black);
+        }
+    
+    }
+}
+

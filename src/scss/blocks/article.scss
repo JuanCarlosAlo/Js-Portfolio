@@ -1,0 +1,37 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.article{
+    position: absolute;
+    width: 85%;
+    opacity: 0;
+}
+
+@include responsive(laptop){
+
+    .article{
+      
+    
+        &__content{
+            display: flex;
+            flex-direction: row-reverse;
+           
+        }
+        &__info{
+            width: 50%;
+        }
+    }
+}
+.about-me__img{
+    height: 400px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.article--show{
+    opacity: 1;
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1),
+ 
+}
