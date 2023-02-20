@@ -1,0 +1,59 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.web-projects-container{
+
+
+}
+
+@include responsive(laptop){
+    .web-projects-container{
+        width: 60%;
+    
+        
+        }
+}
+.gallery__container{
+    opacity: 0;
+    position: absolute;
+}
+.gallery__container--show{
+    opacity: 1;
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1),
+}
+
+.gallery{
+   
+    display: flex;
+    border: 2px solid var(--black);
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    &__item{
+        min-width: 100%;
+        height: 250px;
+        background-color: aliceblue;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+
+    }
+}
+
+.web-buttons{
+    display: flex;
+    flex-direction: column;
+   
+    gap: 20px;
+}

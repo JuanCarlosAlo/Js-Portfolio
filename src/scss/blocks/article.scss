@@ -6,7 +6,21 @@
 .article{
     position: absolute;
     width: 85%;
+    
     opacity: 0;
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+    &__content--reverse{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+       
+    }
+    
 }
 
 @include responsive(laptop){
@@ -17,9 +31,11 @@
         &__content{
             display: flex;
             flex-direction: row-reverse;
+            gap: 40px;
            
         }
         &__info{
+           
             width: 50%;
         }
     }
@@ -27,7 +43,8 @@
 .about-me__img{
     height: 400px;
     width: 100%;
-    background-color: aqua;
+
+    background-color: black;
 }
 
 .article--show{

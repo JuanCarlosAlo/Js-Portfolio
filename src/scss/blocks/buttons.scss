@@ -1,1 +1,20 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+.button{
+    padding: 0.5rem;
+    background-color: var(--white);
 
+    &:hover{
+        @include hover{
+            background-color: var(--black);
+            color: var(--white);
+            cursor: pointer;
+        }
+    }
+
+    &__link{
+        width: 150px;
+    }
+}
