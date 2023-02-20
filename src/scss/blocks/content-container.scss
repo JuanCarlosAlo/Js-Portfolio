@@ -27,13 +27,34 @@
     align-items: center;
     justify-content: center;
     height: 80%;
-   
+    width: 50vw;
     gap: 20px;
-    transform: translateX(0);
+    background-color: red;
+    z-index: 10;
+    
+}
+.bar--left{
+    
+    background-color: aqua;
+    transform: translateX(50%);
+}
+.bar--right{
+    transform: translateX(-50%);
+}
+.bar--left--lower,
+.bar--left--upper{
+    position: relative;
+    right: 50%;
+}
+.bar--right--lower,
+.bar--right--upper{
+    position: relative;
+    left: 50%;
 }
 
 .bar--left--upper,
 .bar--right--upper{
+    transform-origin:bottom;
     &::after{
         @include pseudo(3px,3px){
             position: absolute;
@@ -44,6 +65,7 @@
 }
 .bar--left--lower,
 .bar--right--lower{
+    transform-origin: top;
     &::before{
         @include pseudo(3px,3px){
             position: absolute;
@@ -53,9 +75,9 @@
     }
 }
 
-.bar{
+.bar--show{
     
-    transition: transform 0.5s;
+    transition: transform 0.6s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
     transform: scaleX(1);
 }
@@ -64,13 +86,13 @@
 .bar--left--show{
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-    transform: translateX(-47vw);
+    transform: translateX(72vw);
 }
 
 .bar--right--show{
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-    transform: translateX(47vw);
+    transform: translateX(-72vw);
 }
 
 @include responsive(laptop){

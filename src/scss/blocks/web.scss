@@ -18,10 +18,25 @@
 .gallery__container{
     opacity: 0;
     position: absolute;
+    pointer-events: none;
 }
 .gallery__container--show{
     opacity: 1;
-    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1),
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1);
+    pointer-events: all;
+}
+
+.accordion__container{
+    opacity: 0;
+    position: absolute;
+    width: 60%;
+    pointer-events: none;
+}
+
+.accordion__container--show{
+    opacity: 1;
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1);
+    pointer-events: all;
 }
 
 .gallery{
