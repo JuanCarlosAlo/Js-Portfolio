@@ -6,7 +6,6 @@ const jsAccordion = document.getElementById('javascript-accordion');
 const bar = document.querySelectorAll('.bar');
 
 const openBars = () => {
-  console.log('hola');
   bar.forEach(barElement => {
     barElement.classList.add('bar--show');
   });
@@ -27,6 +26,7 @@ const openBars = () => {
 const displayScreens = data => {
   console.log(data);
   bar.forEach(barElement => {
+    console.log('hola');
     barElement.classList.remove('bar--show');
   });
   leftBar.classList.remove('bar--left--show');
