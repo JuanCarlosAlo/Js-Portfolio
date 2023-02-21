@@ -1,0 +1,12 @@
+.design__projects{
+    width: 100%;
+    
+}
+
+.design-img__container{
+    width: 250px;
+    height: 300px;
+    clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+    background-color: red;
+    border: 2px solid var(--black);
+}

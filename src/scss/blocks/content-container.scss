@@ -13,6 +13,13 @@
     width: 95%;
 
     gap: 20px;
+ 
+}
+.bar__container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .bar{
@@ -36,19 +43,19 @@
     gap: 20px;
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
-    transform: translateX(0);
     z-index: 10;
+    background-color: rgba(215, 215, 215, 1);
     
 }
 .bar--right{
+    transform: translateX(-3px);
     
-    background-color: var(--white);
     left: 100%;
 }
 .bar--left{
+    transform: translateX(3px);
     right: 100%;
-    background-color:var(--white);
-   
+
 }
 .bar--left--lower,
 .bar--left--upper{

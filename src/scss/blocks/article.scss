@@ -6,6 +6,7 @@
 .article{
     position: absolute;
     width: 85%;
+    min-height: 60%;
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(.215,.61,.355,1);
     transition-delay: 0s;
@@ -27,17 +28,19 @@
 @include responsive(laptop){
 
     .article{
-      
+        
     
         &__content{
             display: flex;
             flex-direction: row-reverse;
+          
+            justify-content: flex-end;
             gap: 40px;
            
         }
         &__info{
            
-            width: 40%;
+            width: 30%;
         }
     }
 }
