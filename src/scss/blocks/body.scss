@@ -16,10 +16,11 @@ html {
     src: url('/assets/fonts/fot-rodin-pro/FOTpro-db.otf');
 }
 body {
- background: var(--light-background);
+ background: rgb(255, 255, 255);
  background-size: cover;
  background-repeat: no-repeat;
  font-family: FotRodin-M;
+ overflow: hidden;
 
 }
 
