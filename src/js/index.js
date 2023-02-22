@@ -1,11 +1,16 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { displayScreens, displayWebButtons } from '../js/displayScreens.js';
+import {
+  displayScreens,
+  displayWebButtons,
+  displayJsItems
+} from '../js/displayScreens.js';
 import moon from '../assets/images/moon.svg';
 
 const menu = document.getElementById('menu');
 const webButtons = document.getElementById('web-buttons');
 const darkMode = document.getElementById('dark-mode');
+const accordion = document.getElementById('accordion');
 
 menu.addEventListener('click', e => {
   if (e.target.dataset.menu) {
@@ -15,6 +20,11 @@ menu.addEventListener('click', e => {
 
 webButtons.addEventListener('click', e => {
   displayWebButtons(e.target.dataset.button);
+});
+
+accordion.addEventListener('click', e => {
+  console.log(e.target.dataset.name);
+  displayJsItems(e.target.dataset.name);
 });
 
 if (window.matchMedia('(min-width: 455px)').matches) {

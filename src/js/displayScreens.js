@@ -5,6 +5,7 @@ const htmlCssGallery = document.getElementById('html-css-gallery');
 const jsAccordion = document.getElementById('javascript-accordion');
 const bar = document.querySelectorAll('.bar');
 const webProjectTitle = document.getElementById('web-project-title');
+const allAccrodionItems = document.querySelectorAll('.accordion__item');
 
 const openBars = () => {
   bar.forEach(barElement => {
@@ -46,6 +47,17 @@ const displayScreens = data => {
   });
 };
 
+const displayJsItems = data => {
+  allAccrodionItems.forEach(item => {
+    console.log(data, item.id);
+    if (data === item.id) {
+      item.classList.add('accordion__item--show');
+    } else {
+      item.classList.remove('accordion__item--show');
+    }
+  });
+};
+
 const displayWebButtons = dataset => {
   console.log(jsAccordion.children[0]);
   if (dataset === 'html') {
@@ -59,4 +71,4 @@ const displayWebButtons = dataset => {
   }
 };
 
-export { displayScreens, displayWebButtons };
+export { displayScreens, displayWebButtons, displayJsItems };

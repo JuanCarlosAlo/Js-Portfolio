@@ -8,22 +8,25 @@
 width: 100%;
 }
 
-@include responsive(laptop){
-    .web-projects-container{
-  
-    
-        
-        }
-}
 .gallery__container{
     opacity: 0;
+    right: 0;
     position: absolute;
     pointer-events: none;
+    width: 100%;
 }
 .gallery__container--show{
     opacity: 1;
     transition: opacity 1.4s cubic-bezier(.215,.61,.355,1);
     pointer-events: all;
+}
+
+@include responsive(laptop){
+    .gallery__container{
+        width: 60%;
+    
+        
+        }
 }
 
 
@@ -97,7 +100,7 @@ width: 100%;
         pointer-events: none;
        
     }
-    &__item{
+    &__item--show{
         transform: scaleX(1);
         pointer-events: all;
         transform-origin: left;
