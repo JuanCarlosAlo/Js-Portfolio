@@ -17,6 +17,14 @@ webButtons.addEventListener('click', e => {
   displayWebButtons(e.target.dataset.button);
 });
 
+if (window.matchMedia('(min-width: 455px)').matches) {
+  darkMode.children[0].classList.add('dark-mode__text--show');
+  darkMode.children[1].classList.remove('dark-mode__img--show');
+} else {
+  darkMode.children[0].classList.remove('dark-mode__text--show');
+  darkMode.children[1].classList.add('dark-mode__img--show');
+}
+
 window.addEventListener('resize', e => {
   console.log(moon);
   if (window.matchMedia('(min-width: 455px)').matches) {
