@@ -46,9 +46,15 @@
 }
 .about-me__img{
     height: 400px;
-    width: 60%;
+    width:100%;
 
     background-color: black;
+}
+@include responsive(laptop){
+    .about-me__img{
+        height: 400px;
+        width: 60%;
+    }
 }
 
 .article--show{
