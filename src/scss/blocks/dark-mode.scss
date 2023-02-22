@@ -1,0 +1,17 @@
+.dark-mode{
+    &__text{
+        margin: 0;
+        display: none;
+    }
+    &__text--show{
+        display: block;
+    }
+    &__img{
+        margin: 0;
+        display: none;
+        width: 12px;
+    }
+    &__img--show{
+        display: block;
+    }
+}

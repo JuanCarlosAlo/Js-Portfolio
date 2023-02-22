@@ -1,6 +1,7 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
 import { displayScreens, displayWebButtons } from '../js/displayScreens.js';
+import moon from '../assets/images/moon.svg';
 
 const menu = document.getElementById('menu');
 const webButtons = document.getElementById('web-buttons');
@@ -17,9 +18,12 @@ webButtons.addEventListener('click', e => {
 });
 
 window.addEventListener('resize', e => {
-  if (window.matchMedia('(min-width: 768px)').matches) {
-    darkMode.textContent = 'DARK MODE';
+  console.log(moon);
+  if (window.matchMedia('(min-width: 455px)').matches) {
+    darkMode.children[0].classList.add('dark-mode__text--show');
+    darkMode.children[1].classList.remove('dark-mode__img--show');
   } else {
-    darkMode.textContent = '';
+    darkMode.children[0].classList.remove('dark-mode__text--show');
+    darkMode.children[1].classList.add('dark-mode__img--show');
   }
 });
