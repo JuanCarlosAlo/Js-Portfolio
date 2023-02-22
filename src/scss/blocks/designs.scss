@@ -42,7 +42,7 @@
         height: 98%;
         background-size: cover;
         background-position: center;
-        background-image: url('assets/images/fiesta.png');
+        background-image: url('/assets/images/fiesta.png');
         clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
         
         &__title-hover{
@@ -59,7 +59,7 @@
             left: 100%;
             top: -7%;
             right: 0;
-            background: url('assets/images/design-title-bar.svg')no-repeat left top;
+            background: url('/assets/images/design-title-bar.svg')no-repeat left top;
             transition: width .3s cubic-bezier(.645,.045,.355,1);
             -webkit-filter:invert(1);
              filter:invert(1);
@@ -71,7 +71,7 @@
             position: absolute;
             height: 125px;
             width: 0;
-            background: url('assets/images/hexagon-top.svg') no-repeat left top;
+            background: url('/assets/images/hexagon-top.svg') no-repeat left top;
            
             z-index: 1;
             transition: width .3s cubic-bezier(.645,.045,.355,1);
@@ -86,7 +86,7 @@
             position: absolute;
             height: 160px;
             width:0;
-            background: url('assets/images/hexagon-bottom.svg')no-repeat right bottom;
+            background: url('/assets/images/hexagon-bottom.svg')no-repeat right bottom;
           
             z-index: 1;
             transition: width .3s cubic-bezier(.645,.045,.355,1);
