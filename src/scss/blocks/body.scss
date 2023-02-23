@@ -1,3 +1,8 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
 html {
     font-size: 14px;
 }
@@ -21,6 +26,38 @@ body {
  background-repeat: no-repeat;
  font-family: FotRodin-M;
  
+ &::before{
+    @include pseudo(100%,100%){
+        position: fixed;
+        background-image: url('/assets/images/screen-bg-mobile.png') ;
+        background-size: cover;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-blend-mode: multiply;
+        pointer-events: none;
+        z-index: 20;
+        opacity: 0.7;
+
+        @include responsive(laptop){
+            background-image: url('/assets/images/screen-bg.png') ;
+        }
+    }
+ }
+ &::after{
+    @include pseudo(100%,100%){
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-image: url('/assets/images/pixel-bg.png') ;
+        background-size: cover;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-blend-mode: multiply;
+        pointer-events: none;
+        z-index: 20;
+        opacity: 0.1;
+ }
+}
 
 }
 

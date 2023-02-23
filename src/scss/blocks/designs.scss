@@ -5,15 +5,36 @@
 
 .design{
     &__projects{
+        display: flex;
+       flex-direction: column;
         width: 100%;
+   
+    }
+    &__projects--row-even{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        
+    }
+    &__projects--row-uneven{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+       
+
     }
     &__item{
         position: relative;
         width: 140px;
         height: 170px;
-
+        @include hover{
         &:hover .design__img__top-hover {
             width:150px;
+        }
         }
         &:hover .design__img__bottom-hover{
             width:150px;
@@ -21,9 +42,11 @@
         &:hover .design__img__line-title-hover{
             width: 160px;   
         }
+        
         &:hover .design__img__title-hover{
             color: var(--black);
         }
+    
     }
     &__img-container{
         position: relative;
@@ -42,7 +65,7 @@
         height: 98%;
         background-size: cover;
         background-position: center;
-        background-image: url('/assets/images/fiesta.png');
+     
         clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
         
         &__title-hover{
@@ -94,4 +117,135 @@
         filter:invert(1);
         }
     }
+}
+
+@include responsive(laptop){
+
+    .design{
+        &__projects{
+            display: flex;
+           flex-direction: column;
+            width: 70%;
+           
+        }
+        &__projects--row-even{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        &__projects--row-uneven{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+           
+            gap:2rem
+        }
+        &__item{
+            position: relative;
+            width: 140px;
+            height: 170px;
+    
+            &:hover .design__img__top-hover {
+                width:150px;
+            }
+            &:hover .design__img__bottom-hover{
+                width:150px;
+            }
+            &:hover .design__img__line-title-hover{
+                width: 160px;   
+            }
+            &:hover .design__img__title-hover{
+                color: var(--black);
+            }
+        }
+        &__img-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+            background-color: black;
+           
+        }
+        &__img{
+     
+            width: 98%;
+            height: 98%;
+            background-size: cover;
+            background-position: center;
+         
+            clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+            
+            &__title-hover{
+                position: absolute;
+                right: -95%;
+                top: -17%;
+                color: transparent;
+                transition: color .3s cubic-bezier(.645,.045,.355,1);
+            }
+            &__line-title-hover{
+                position: absolute;
+                width: 0;
+                height: 51px;
+                left: 100%;
+                top: -7%;
+                right: 0;
+                background: url('/assets/images/design-title-bar.svg')no-repeat left top;
+                transition: width .3s cubic-bezier(.645,.045,.355,1);
+                -webkit-filter:invert(1);
+                 filter:invert(1);
+            }
+    
+            &__top-hover{
+                top: -4.5%;
+                left: -3.5%;
+                position: absolute;
+                height: 125px;
+                width: 0;
+                background: url('/assets/images/hexagon-top.svg') no-repeat left top;
+               
+                z-index: 1;
+                transition: width .3s cubic-bezier(.645,.045,.355,1);
+                -webkit-filter:invert(1);
+                filter:invert(1);
+                
+            }
+            &__bottom-hover{
+                bottom: -4.5%;
+                left: auto;
+                right: -3.6%;
+                position: absolute;
+                height: 160px;
+                width:0;
+                background: url('/assets/images/hexagon-bottom.svg')no-repeat right bottom;
+              
+                z-index: 1;
+                transition: width .3s cubic-bezier(.645,.045,.355,1);
+                -webkit-filter:invert(1);
+            filter:invert(1);
+            }
+        }
+    }
+    
+}
+
+
+
+.advertising{
+    background-image: url('/assets/images/fiesta.jpg');
+}
+.omd{
+    background-image: url('/assets/images/design-omd.jpg');
+}
+.reality{
+    background-image: url('/assets/images/design-your-reality.jpg');
+}
+.illlustration{
+    background-image: url('/assets/images/design-ilustracion-not-ready.jpg');
+}
+.tokyo{
+    background-image: url('/assets/images/designs-tokyo.jpg');
 }

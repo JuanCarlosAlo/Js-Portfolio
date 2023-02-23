@@ -94,17 +94,20 @@ width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding: 1rem;
         transform-origin: left;
-        transition: transform .3s cubic-bezier(.645,.045,.355,1);
-        transform: scaleX(0);
+        transition: opacity .4s cubic-bezier(.645,.045,.355,1);
+        opacity: 0;
         pointer-events: none;
+        border: 2px solid var(--black);
        
     }
     &__item--show{
-        transform: scaleX(1);
+        opacity: 1;
         pointer-events: all;
         transform-origin: left;
-        transition: transform .3s cubic-bezier(.645,.045,.355,1);
+  
+        transition: opacity .6s .4s cubic-bezier(.645,.045,.355,1);
     }
  
     &__info{
