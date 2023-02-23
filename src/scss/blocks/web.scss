@@ -13,7 +13,10 @@ width: 100%;
     right: 0;
     position: absolute;
     pointer-events: none;
+    padding: 2rem;
     width: 100%;
+    border: 2px solid var(--black);
+    overflow: hidden;
 }
 .gallery__container--show{
     opacity: 1;
@@ -24,20 +27,24 @@ width: 100%;
 @include responsive(laptop){
     .gallery__container{
         width: 60%;
-    
-        
+
         }
+
+   
 }
+
 
 
 
 .gallery{
    
     display: flex;
-    border: 2px solid var(--black);
+    
     height: 100%;
-    overflow: hidden;
+
     margin-bottom: 1rem;
+    transform: translateX(var(--slider-translate));
+    transition: transform 1.4s cubic-bezier(.215,.61,.355,1);
     &__item{
         min-width: 100%;
         height: 400px;
@@ -56,12 +63,44 @@ width: 100%;
 
 
     }
+    &__arrow--left{
+        position: absolute;
+        width: 50px;
+        top: 150px;
+        left: 0px;
+
+    }
+    &__arrow--right{
+        position: absolute;
+        width: 50px;
+        top: 150px;
+        right: 0px;
+
+    }
 }
+@include responsive(laptop){
+    .gallery{
+        &__arrow--left{
+            position: absolute;
+            top: 180px;
+            left: -100px;
+    
+        }
+        &__arrow--right{
+            position: absolute;
+            top: 130px;
+            right: -100px;
+    
+        }
+    
+    }    
+
+}
+
 
 .web-buttons{
     display: flex;
     flex-direction: column;
-   
     gap: 20px;
 }
 

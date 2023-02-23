@@ -12,7 +12,7 @@
     width: 350px;
     font-size: var(--mobile-font-size-web-projects);
     opacity: 0;
-    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1);
+    
     &::after{
         @include pseudo(60%,2px){
             top: -20%;
