@@ -21,10 +21,11 @@ html {
     src: url('/assets/fonts/fot-rodin-pro/FOTpro-db.otf');
 }
 body {
- background: rgba(215, 215, 215, 1);
+ background: var(--light-background);
  background-size: cover;
  background-repeat: no-repeat;
  font-family: FotRodin-M;
+ color: var(--black);
  
  &::before{
     @include pseudo(100%,100%){
@@ -40,6 +41,7 @@ body {
 
         @include responsive(laptop){
             background-image: url('/assets/images/screen-bg.png') ;
+         
         }
     }
  }
@@ -61,3 +63,9 @@ body {
 
 }
 
+.body-dark{
+    --light-background: rgba(31,31,31,1) ;
+    --white: rgb(0, 0, 0);
+    --black:#fff;
+    --dark-background:rgba(215, 215, 215, 1);
+}

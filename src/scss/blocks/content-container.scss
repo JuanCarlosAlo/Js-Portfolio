@@ -44,7 +44,7 @@
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
     z-index: 10;
-    background-color: rgba(215, 215, 215, 1);
+    background-color: var(--light-background);
     
 }
 .bar--right{

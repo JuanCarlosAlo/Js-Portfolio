@@ -8,6 +8,7 @@ import {
   prevSlider,
 } from "../js/displayScreens.js";
 import moon from "../assets/images/moon.svg";
+import { darkModeToggle } from "../js/darkMode.js";
 
 const menu = document.getElementById("menu");
 const webButtons = document.getElementById("web-buttons");
@@ -15,12 +16,13 @@ const darkMode = document.getElementById("dark-mode");
 const accordion = document.getElementById("accordion");
 const galleryButtonNext = document.getElementById("arrow-right");
 const galleryButtonPrev = document.getElementById("arrow-left");
+const darkModeButton = document.getElementById("dark-mode");
 
-displayScreens("intro");
+displayScreens("intro", galleryButtonNext, galleryButtonPrev);
 
 menu.addEventListener("click", (e) => {
   if (e.target.dataset.menu) {
-    displayScreens(e.target.dataset.menu);
+    displayScreens(e.target.dataset.menu, galleryButtonNext, galleryButtonPrev);
   }
 });
 
@@ -42,6 +44,10 @@ galleryButtonNext.addEventListener("click", (e) => {
 });
 galleryButtonPrev.addEventListener("click", (e) => {
   prevSlider();
+});
+
+darkModeButton.addEventListener("click", (e) => {
+  darkModeToggle();
 });
 
 if (window.matchMedia("(min-width: 455px)").matches) {
