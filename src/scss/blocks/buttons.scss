@@ -15,6 +15,14 @@
     }
 
     &__link{
-        width: 150px;
+        width: 80px;
+    }
+}
+
+@include responsive(laptop){
+    .button{
+        &__link{
+            width: 150px;
+        }
     }
 }

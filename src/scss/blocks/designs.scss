@@ -159,8 +159,7 @@
                 right: 0;
                 background: url('/assets/images/design-title-bar.svg')no-repeat left top;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
-                -webkit-filter:invert(1);
-                 filter:invert(1);
+               
             }
     
             &__top-hover{
@@ -173,14 +172,13 @@
                
                 z-index: 1;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
-                -webkit-filter:invert(1);
-                filter:invert(1);
+         
                 
             }
             &__bottom-hover{
                 bottom: -4.5%;
                 left: auto;
-                right: -4%;
+                right: -4.2%;
                 position: absolute;
                 height: 160px;
                 width:0;
@@ -188,8 +186,7 @@
               
                 z-index: 1;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
-                -webkit-filter:invert(1);
-            filter:invert(1);
+          
             }
         }
     }
