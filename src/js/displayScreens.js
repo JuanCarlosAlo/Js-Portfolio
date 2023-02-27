@@ -83,6 +83,9 @@ const displayWebButtons = (dataset, arrowRight, arrowLeft) => {
     webProjectTitle.classList.add("web-project-title--show");
     allAccrodionItems.forEach((item) => {
       item.classList.remove("accordion__item--show");
+      allGalleryInfo.forEach((item) => {
+        allGalleryInfo[0].classList.add("gallery__info--show");
+      });
     });
   } else {
     arrowRight.classList.remove("gallery__arrow--right--show");
@@ -90,6 +93,9 @@ const displayWebButtons = (dataset, arrowRight, arrowLeft) => {
     htmlCssGallery.classList.remove("gallery__container--show");
     jsAccordion.classList.add("accordion--show");
     webProjectTitle.classList.remove("web-project-title--show");
+    allGalleryInfo.forEach((item, index) => {
+      item.classList.remove("gallery__info--show");
+    });
   }
 };
 
