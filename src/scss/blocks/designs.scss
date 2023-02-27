@@ -35,6 +35,7 @@
     
     }
     &__img-container{
+        
         position: relative;
         display: flex;
         justify-content: center;
@@ -43,16 +44,18 @@
         width: 100%;
         clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
         background-color: black;
+        pointer-events: none;
        
     }
     &__img{
- 
+       
         width: 98%;
         height: 98%;
         background-size: cover;
         background-position: center;
      
         clip-path: polygon(50% 0%, 0 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+        pointer-events: none;
         &::before{
             @include pseudo(100%, 60px){
                 bottom: 0;
@@ -70,6 +73,7 @@
             text-align: center;
             transition: color .3s cubic-bezier(.645,.045,.355,1);
             z-index: 10;
+            pointer-events: none;
         }
         
     }
@@ -96,7 +100,7 @@
             flex-wrap: wrap;
             flex-direction: row;
            
-            gap:2rem
+            gap:6rem
         }
         &__item{
             position: relative;
@@ -159,6 +163,7 @@
                 right: 0;
                 background: url('/assets/images/design-title-bar.svg')no-repeat left top;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
+                pointer-events: none;
                
             }
     
@@ -172,6 +177,7 @@
                
                 z-index: 1;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
+                pointer-events: none;
          
                 
             }
@@ -186,6 +192,7 @@
               
                 z-index: 1;
                 transition: width .3s cubic-bezier(.645,.045,.355,1);
+                pointer-events: none;
           
             }
         }

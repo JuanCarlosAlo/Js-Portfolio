@@ -39,6 +39,9 @@ const openBars = () => {
 };
 
 const displayScreens = (data, arrowRight, arrowLeft) => {
+  if (data === "dark") {
+    return;
+  }
   jsAccordion.classList.remove("accordion--show");
   arrowRight.classList.remove("gallery__arrow--right--show");
   arrowLeft.classList.remove("gallery__arrow--left--show");

@@ -4,7 +4,7 @@
 @use "../config/variables.scss" as *;
 
 .web-projects-container{
-
+position: relative;
 width: 100%;
 }
 
@@ -28,7 +28,7 @@ width: 100%;
 @include responsive(laptop){
     .gallery__container{
         right: 3%;
-        width: 55%;
+        width: 90%;
         min-height: 100%;
         }
 
@@ -88,16 +88,16 @@ width: 100%;
     }
     &__arrow--left{
         position: absolute;
-        width: 50px;
-        top: 55%;
-        left: 0px;
+        width: 30px;
+        top: 40%;
+        left: 0;
         opacity: 0;
         pointer-events: none;
     }
     &__arrow--right{
         position: absolute;
-        width: 50px;
-        top: 55%;
+        width: 30px;
+        top: 40%;
         right: 0px;
         opacity: 0;
         pointer-events: none;
@@ -116,13 +116,13 @@ width: 100%;
         &__arrow--left{
             position: absolute;
             top: 70%;
-            left: 450px;
+            left: 0;
     
         }
         &__arrow--right{
             position: absolute;
             top: 70%;
-            right: -70px;
+            right: -4%
     
         }
     
