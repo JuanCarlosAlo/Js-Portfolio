@@ -45,16 +45,22 @@
         }
     }
 }
+.about-me__img-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+}
 .about-me__img{
-    height: 400px;
-    width:100%;
-
-    background-color: black;
+    width: 45%;
 }
 @include responsive(laptop){
+    .about-me__img-container{
+       
+    }
     .about-me__img{
-        height: 400px;
-        width: 60%;
+        width: 45%;
     }
 }
 

@@ -50,7 +50,7 @@
     margin-right: auto;
     @include responsive(tablet) {
       gap: 40px;
-      align-items: center;
+     
  
     }
     @include responsive(laptop) {
