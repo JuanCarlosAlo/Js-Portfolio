@@ -1,0 +1,24 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+
+.about-me__img-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+}
+.about-me__img{
+    width: 45%;
+}
+@include responsive(laptop){
+    .about-me__img-container{
+       
+    }
+    .about-me__img{
+        width: 45%;
+    }
+}

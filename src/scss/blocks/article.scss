@@ -19,6 +19,7 @@
     }
     &__content--reverse{
         display: flex;
+       
         flex-direction: column-reverse;
         gap: 40px;
        
@@ -34,8 +35,8 @@
         &__content{
             display: flex;
             flex-direction: row-reverse;
-          
-            justify-content: flex-end;
+            justify-content: space-between;
+            
             gap: 40px;
            
         }
@@ -43,24 +44,6 @@
            
             width: 30%;
         }
-    }
-}
-.about-me__img-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--white);
-}
-.about-me__img{
-    width: 45%;
-}
-@include responsive(laptop){
-    .about-me__img-container{
-       
-    }
-    .about-me__img{
-        width: 45%;
     }
 }
 
