@@ -32,6 +32,25 @@
     opacity: 1;
     transition: opacity 1.4s cubic-bezier(.215,.61,.355,1);
 }
+@include responsive(tablet){
+    .web-project-title{
+        width: 150px;
+        &::after{
+            @include pseudo(100%,2px){
+                top: -20%;
+                left: 0;
+                background-color: var(--black);
+            }
+        }
+        &::before{
+            @include pseudo(100%,2px){
+                bottom: -20%;
+                left: 0;
+                background-color: var(--black);
+            }
+        }
+    }
+}
 
 @include responsive(laptop){
 

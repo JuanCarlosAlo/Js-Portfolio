@@ -15,14 +15,33 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @include responsive(tablet) {
+            width: 30%;
+           
+        }
     
+    }
+    
+    &__content{
+        @include responsive(tablet) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            
+            
+           
+        }
     }
     &__content--reverse{
         display: flex;
        
         flex-direction: column-reverse;
         gap: 40px;
-       
+        @include responsive(tablet) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
     }
     
 }
@@ -38,6 +57,10 @@
             justify-content: space-between;
             
             gap: 40px;
+            &--about-me{
+                justify-content: flex-end;
+                gap: 25%;
+            }
            
         }
         &__info{

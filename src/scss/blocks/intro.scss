@@ -3,22 +3,39 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 
-
-.about-me__img-container{
+.about-me {
+  &__img-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
     border: 2px solid var(--white);
-}
-.about-me__img{
-    width: 45%;
-}
-@include responsive(laptop){
-    .about-me__img-container{
-       
+    @include responsive(tablet) {
+        width: 55%;
     }
-    .about-me__img{
-        width: 45%;
+    @include responsive(laptop) {
+        width: 25%;
+    }
+  }
+ 
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.list__item{
+    position: relative;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    &::after{
+        @include pseudo(4px,4px){
+            top: 40%;
+            left: 0px;
+            background-color: var(--black);
+        }
     }
 }
