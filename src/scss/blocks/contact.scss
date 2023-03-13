@@ -6,7 +6,10 @@
 .contact{
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 2rem;
 
     &__item{
         display: flex;
@@ -27,7 +30,20 @@
 .icon{
     width: 30px;
 }
+@include responsive(tablet){
 
+    .contact{
+        gap: 2rem;
+        &__item{
+            width: 35%;
+            &:hover{
+                color: var(--white);
+                background-color: var(--black);
+                cursor: pointer;
+            }
+        }
+    }
+}
 @include responsive(laptop){
 
     .contact{

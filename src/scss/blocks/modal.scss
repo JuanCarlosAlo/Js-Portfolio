@@ -69,7 +69,9 @@
     max-width: fit-content;
     padding: 3px;
     @include responsive(tablet) {
-      top: 30px;
+      
+      width: 60%;
+      left: 20%;
     }
     @include responsive(desktop) {
       width: 50%;
