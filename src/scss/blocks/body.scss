@@ -69,3 +69,16 @@ body {
     --black:#fff;
     --dark-background:rgba(215, 215, 215, 1);
 }
+
+.body-dark .svg {
+    filter: invert(1);
+}
+.body-dark .design__img__line-title-hover {
+    filter: invert(1);
+}
+.body-dark .design__img__top-hover {
+    filter: invert(1);
+}
+.body-dark .design__img__bottom-hover {
+    filter: invert(1);
+}
