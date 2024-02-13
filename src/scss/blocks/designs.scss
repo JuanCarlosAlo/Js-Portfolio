@@ -149,7 +149,7 @@
             &__title-hover{
                 position: absolute;
                 left: auto;
-                right: -75%;
+                right: -7.8px;
                 top: -17%;
                 color: transparent;
                 transition: color .3s cubic-bezier(.645,.045,.355,1);
@@ -169,7 +169,7 @@
     
             &__top-hover{
                 top: -4.5%;
-                left: -4.7%;
+                left: -8px;
                 position: absolute;
                 height: 165px;
                 width: 0;
@@ -184,7 +184,7 @@
             &__bottom-hover{
                 bottom: -4.5%;
                 left: auto;
-                right: -4.2%;
+                right: -8px;
                 position: absolute;
                 height: 160px;
                 width:0;
